@@ -3,7 +3,7 @@ package com.mina.recordpattern;
 /*
 Record pattern matching is a way to match the Record’s type and access its components in a single step.
  */
-public class RecordPatternTransactionExample {
+public class RecordPatternExample {
 
   // I'm using "_" for readability here, this won't compile
   public static String getTransactionType(Transaction transaction) {
@@ -14,5 +14,4 @@ public class RecordPatternTransactionExample {
       default -> "Unknown transaction type";
     };
   }
-
 }

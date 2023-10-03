@@ -40,8 +40,7 @@ class PatternMatchingSwitchExampleTest {
 
   @Test
   public void shouldThrowException() {
-    Transaction transaction = null;
     assertThrows(IllegalArgumentException.class,
-        () -> SwitchPatternMatchingExample.getTransactionType(transaction));
+        () -> SwitchPatternMatchingExample.getTransactionType(null));
   }
 }

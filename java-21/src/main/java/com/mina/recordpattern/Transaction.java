@@ -1,5 +1,5 @@
-package com.mina.recordpatterns;
+package com.mina.recordpattern;
 
-public record Transaction() {
+public record Transaction(String type, double amount) {
 
 }
