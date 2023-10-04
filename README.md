@@ -18,10 +18,8 @@ Sequenced collection provides us with methods having a defined encounter order f
 reverse order.
 It means we can add, retrieve, or remove elements at both ends of the collection.
 
-<img alt="Sequenced Collections" height="300" src="/Users/minarashidi/Documents/sequenced-collection-type-hierarchy.png" width="800"/>
+<img alt="Sequenced Collections" height="300" src="sequenced-collection-type-hierarchy.png" width="800"/>
 
-
-[//]: # (![]&#40;/Users/minarashidi/Documents/sequenced-collection-type-hierarchy.png&#41;)
 
 #### String Templates
 
