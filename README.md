@@ -2,7 +2,7 @@ This repository contains modules about core Java.
 
 ---
 
-### Java 21
+## Java 21
 
 JDK 21 released this September 19th. It contains many new capabilities, including virtual threads, pattern matching for switch, record
 patterns, and sequenced collections.
@@ -12,7 +12,7 @@ instance main methods.
 
 https://openjdk.org/projects/jdk/21/
 
-#### SequencedCollection
+### SequencedCollection
 
 Sequenced collection provides us with methods having a defined encounter order for accessing first and last elements and iterating in
 reverse order.
@@ -21,7 +21,7 @@ It means we can add, retrieve, or remove elements at both ends of the collection
 <img alt="Sequenced Collections" height="300" src="sequenced-collection-type-hierarchy.png" width="800"/>
 
 
-#### String Templates
+### String Templates
 
 Some techniques for composing strings before String Templates:
 
@@ -33,7 +33,8 @@ Some techniques for composing strings before String Templates:
   var greeting = new StringBuilder()
   .append("Hello, welcome ")
   .append(name)
-  .toString();```
+  .toString();
+  ```
 
 * String::format and String::formatted: They allow for reusable templates, but they require us to specify format and provide the variables
   in the correct order.
@@ -51,7 +52,7 @@ Some techniques for composing strings before String Templates:
   var greeting = format.format(name);
   ```
 
-#### String Templates to rescue
+##### String Templates to rescue
 It is simple and concise
 
 The new way to work with strings is called template expression. They can perform interpolation but also provide us with the flexibility to compose the Strings, and convert structured text into any object, not just a String.
@@ -70,9 +71,19 @@ There are three components to a template expression:
   }
   """;
   ```
+##### Virtual Threads
+
+Virtual threads feel like normal threads from a Java code perspective, but they are not mapped 1:1 to OS/platform threads.
+It is M:N mapping from virtual threads to carrier threads and thus to OS threads.
+
+There is a pool of so-called carrier threads onto which a virtual thread is temporarily mapped ("mounted"). 
+As soon as the virtual thread encounters a blocking operation, the virtual thread is removed ("unmounted") from the carrier thread, and the carrier thread can execute another virtual thread (a new one or a previously blocked one).
+(The carrier thread pool is a ForkJoinPool)
+
+<img alt="Virtual Threads" height="300" src="virtual-threads-mapped-to-carrier-threads.png" width="800"/>
 
 ---
 
-### Java 17
+## Java 17
 
 ---
