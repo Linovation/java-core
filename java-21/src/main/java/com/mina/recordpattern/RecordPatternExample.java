@@ -11,7 +11,7 @@ public class RecordPatternExample {
       case null -> throw new IllegalArgumentException("Transaction can not be null.");
       case Transaction(String type, double amount) when type.equals("Deposit") && amount > 0 -> "Deposit";
       case Transaction(String type, _) when type.equals("Withdrawal") -> "Withdrawal";
-      default -> "Unknown transaction type";
+      case Transaction(_,_) -> "Unknown transaction type";
     };
   }
 }
